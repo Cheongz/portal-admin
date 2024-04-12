@@ -13,6 +13,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { HttpClientModule } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
+import { TopToolbarComponent } from './components/top-toolbar/top-toolbar.component';
+import { ContentComponent } from './components/content/content.component';
 
 const routes: Routes = [
   {
@@ -28,6 +30,8 @@ const routes: Routes = [
     FooterComponent,
     HeaderComponent,
     TopHeaderComponent,
+    TopToolbarComponent,
+    ContentComponent,
   ],
   imports: [
     CommonModule,

@@ -1,9 +1,17 @@
-<div class="card">
-  <div>
+<div class="d-flex flex-column flex-root">
+  <div class="page d-flex flex-row min-vh-100">
     <app-sidebar></app-sidebar>
-  </div>
-  <div class="card">
-    <app-top-header></app-top-header>
-    <app-header></app-header>
+    <div class="wrapper d-flex flex-column min-vw-100">
+      <app-header class="header align-items-stretch"></app-header>
+      <div class="d-flex flex-column min-vh-100">
+        <ng-container>
+          <app-top-toolbar class="toolbar"></app-top-toolbar>
+        </ng-container>
+        <div class="post d-flex min-vh-100">
+          <app-content class="container-fluid"></app-content>
+        </div>
+      </div>
+      <app-footer class="footer py-4 d-flex flex-lg-column"></app-footer>
+    </div>
   </div>
 </div>
