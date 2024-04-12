@@ -9,9 +9,11 @@ import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardsComponent } from './modules/dashboards/dashboards.component';
+import { LoginComponent } from './modules/login/login.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, DashboardsComponent, LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
