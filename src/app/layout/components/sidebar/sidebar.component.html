@@ -1,1 +1,42 @@
-<p>is working</p>
+<!-- <div class="sidebar vh-100" [ngClass]="{ open: isOpen }">
+  <div class="flex-column-auto">
+    <button (click)="toggleSidebar()" class="text">=</button>
+  </div>
+  <div class="aside-menu flex-column-auto overflow-hidden">
+    <div class="hover-scroll-overlay-y my-5 my-lg-5">
+      <div
+        class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500"
+      >
+        <div class="menu-item">
+          <a
+            routerLink="/dashboard"
+            routerLinkActive="active"
+            class="menu-link without-subactive"
+          >
+            <span class="menu-icon">icon</span>
+            <span class="menu-title">Dashboard</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="sidebar-logo flex-column-auto">
+  <a routerLink="/dashboard">
+    <img
+      src="../../../../assets/anonymous1.png"
+      alt="logo"
+      width="135"
+      class="logo"
+    />
+  </a>
+  <div class="btn btn-icon w-auto px-0 btn-active-color-primary sidebar-toggle">
+    <img
+      src="'../../../../assets/media/icons/duotune/arrows/arr079.svg'"
+      class="svg-icon svg-icon-1 rotate-180"
+    />
+  </div>
+</div>
+<div class="sidebar-menu flex-column-fluid">
+  <div class="overflow-auto hover-scroll-overlay-y my-5 my-lg-5"></div>
+</div>

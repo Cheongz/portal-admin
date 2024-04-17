@@ -2,13 +2,13 @@ import { Routes } from '@angular/router';
 
 const Routing: Routes = [
   {
-    path: 'dashboards',
+    path: 'dashboard',
     loadChildren: () =>
-      import('./dashboards/dashboards.module').then((m) => m.DashboardsModule),
+      import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
   },
   {
     path: '',
-    redirectTo: '/dashboards',
+    redirectTo: '/dashboard',
     pathMatch: 'full',
   },
 ];

@@ -1,13 +1,16 @@
 <div class="d-flex flex-column flex-root">
-  <div class="page d-flex flex-row min-vh-100">
-    <app-sidebar></app-sidebar>
-    <div class="wrapper d-flex flex-column min-vw-100">
+  <div class="page d-flex flex-row flex-column-fluid">
+    <app-sidebar
+      class="sidebar sidebar-dark sidebar-hoverable drawer drawer-start drawer-on"
+      style="width: 250px !important"
+    ></app-sidebar>
+    <div class="wrapper d-flex flex-column flex-row-fluid">
       <app-header class="header align-items-stretch"></app-header>
-      <div class="d-flex flex-column min-vh-100">
+      <div class="d-flex flex-column vh-100">
         <ng-container>
           <app-top-toolbar class="toolbar"></app-top-toolbar>
         </ng-container>
-        <div class="post d-flex min-vh-100">
+        <div class="post d-flex">
           <app-content class="container-fluid"></app-content>
         </div>
       </div>
@@ -15,3 +18,6 @@
     </div>
   </div>
 </div>
+<!-- 
+class="sidebar sidebar-dark sidebar-hoverable drawer drawer-start drawer-on"
+style="width: 250px !important" -->

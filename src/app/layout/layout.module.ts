@@ -1,4 +1,4 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -12,14 +12,15 @@ import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { HttpClientModule } from '@angular/common/http';
-import { DomSanitizer } from '@angular/platform-browser';
 import { TopToolbarComponent } from './components/top-toolbar/top-toolbar.component';
 import { ContentComponent } from './components/content/content.component';
+import { Routing } from '../pages/routing';
 
 const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
+    children: Routing,
   },
 ];
 
@@ -43,6 +44,7 @@ const routes: Routes = [
     MatButtonModule,
     MatBadgeModule,
   ],
+  exports: [RouterModule],
   providers: [MatIconRegistry],
 })
 export class LayoutModule {}

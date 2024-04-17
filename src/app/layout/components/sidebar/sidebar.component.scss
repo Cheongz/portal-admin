@@ -1,0 +1,120 @@
+// .sidebar {
+//   left: 75px;
+//   width: 75px;
+//   background-color: #f0f0f0;
+//   padding: 20px;
+//   transition: left 0.3s, width 0.3s;
+// }
+
+// .sidebar.open {
+//   left: 265;
+//   width: 265px;
+// }
+
+// .sidebar:not(.open):hover {
+//   left: 265px;
+//   width: 265px;
+// }
+
+// .sidebar ul {
+//   list-style-type: none;
+//   padding: 0;
+// }
+
+// .sidebar ul li {
+//   margin-bottom: 10px;
+// }
+
+// .sidebar ul li a {
+//   text-decoration: none;
+//   color: #333;
+// }
+
+// .sidebar button {
+//   margin-left: 6px;
+//   margin-bottom: 50px;
+//   transition: margin-left 0.3s;
+// }
+
+// .sidebar.open button {
+//   margin-left: 195px;
+// }
+
+// .sidebar:not(.open):hover button {
+//   margin-left: 195px;
+// }
+
+a,
+a:hover {
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.btn {
+  outline: none !important;
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #181c32;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 0.475rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: calc(1.5em + 1.5rem + 2px);
+  width: calc(1.5em + 1.5rem + 2px);
+}
+
+.sidebar.sidebar-dark .sidebar-toggle {
+  color: #494b74;
+}
+
+.btn:not(.btn-shadow):not(.shadow):not(.shadow-sm):not(.shadow-lg) {
+  box-shadow: none !important;
+}
+
+.btn.btn-icon:not(.btn-outline):not(.btn-dashed):not(.border-hover):not(
+    .border-active
+  ):not(.btn-flush) {
+  border: 0;
+}
+
+.btn.btn-icon .svg-icon {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+.btn .svg-icon {
+  flex-shrink: 0;
+  line-height: 0;
+  margin-right: 0.5rem;
+}
+
+.rotate-180 {
+  transition: transform 0.3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.svg-icon {
+  line-height: 1;
+  color: #a1a5b7;
+}
+
+.flex-column-fluid {
+  flex: 1 0 auto;
+}

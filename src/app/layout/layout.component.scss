@@ -7,9 +7,82 @@
   }
 }
 
-.page-loaded {
-  app-layout {
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 20px #523f690d;
+  padding: 0;
+}
+
+.sidebar.sidebar-dark {
+  background-color: #f3f3f3;
+}
+
+.drawer {
+  display: flex;
+  overflow: auto;
+  z-index: 110;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.drawer.drawer-on {
+  transform: none;
+  box-shadow: 0 1px 9px -3px #0000000d;
+  transition: transform 0.3s ease-in-out;
+}
+
+.drawer.drawer-start {
+  left: 0;
+  transform: translate(100%);
+}
+
+.flex-row-fluid {
+  flex: 1 auto;
+  min-width: 0;
+}
+
+//mobile screen
+@media (max-width: 991.98px) {
+  .sidebar {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+  }
+}
+
+// Wrapper
+.wrapper {
+  transition: 0.3s ease, margin-right 0.3s ease;
+
+  // // Aside default enabled and aside fixed modes
+  // .aside-enabled.aside-fixed & {
+  //   transition: padding-left 0.3s ease;
+  //   padding-left: 0.3s;
+  // }
+
+  // // Aside default enabled, aside fixed and aside minimize modes
+  // .aside-enabled.aside-fixed[data-kt-aside-minimize="on"] & {
+  //   transition: padding-left 0.3s ease;
+  //   padding-left: 0.3s;
+  // }
+
+  // Fixed header mode
+  .header-fixed & {
+    padding-top: fixed;
+  }
+
+  // Fixed header & fixed toolbar modes
+  .header-fixed.toolbar-fixed & {
+    padding-top: fixed;
   }
 }
