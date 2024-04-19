@@ -37,12 +37,16 @@
 
 .drawer.drawer-start {
   left: 0;
-  transform: translate(100%);
+  transform: translate3D(100%);
 }
 
 .flex-row-fluid {
   flex: 1 auto;
   min-width: 0;
+}
+
+.flex-column-fluid {
+  flex: 1 0 auto;
 }
 
 //mobile screen
@@ -60,29 +64,56 @@
   }
 }
 
-// Wrapper
-.wrapper {
-  transition: 0.3s ease, margin-right 0.3s ease;
-
-  // // Aside default enabled and aside fixed modes
-  // .aside-enabled.aside-fixed & {
-  //   transition: padding-left 0.3s ease;
-  //   padding-left: 0.3s;
-  // }
-
-  // // Aside default enabled, aside fixed and aside minimize modes
-  // .aside-enabled.aside-fixed[data-kt-aside-minimize="on"] & {
-  //   transition: padding-left 0.3s ease;
-  //   padding-left: 0.3s;
-  // }
-
-  // Fixed header mode
-  .header-fixed & {
-    padding-top: fixed;
+@media (min-width: 992px) {
+  .sidebar-fixed .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 101;
+    overflow: hidden;
   }
 
-  // Fixed header & fixed toolbar modes
-  .header-fixed.toolbar-fixed & {
-    padding-top: fixed;
+  .sidebar {
+    width: 265px;
+    transition: width 0.3s ease;
+  }
+
+  main,
+  span,
+  ol,
+  ul,
+  pre,
+  div {
+    scrollbar-width: thin;
+    scrollbar-color: #eff2f5 transparent;
+  }
+
+  .header-fixed.toolbar-fixed .wrapper {
+    padding-top: calc(65px + var(-kt-toolbar-height));
+  }
+
+  .sidebar-enabled.sidebar-fixed .wrapper {
+    transition: padding-left 0.3s ease;
+    padding-left: 265px;
+  }
+
+  .wrapper {
+    transition: padding-left 0.3s ease, margin-right 0.3s ease;
   }
 }
+
+// // Wrapper
+// .wrapper {
+//   transition: 0.3s ease, margin-right 0.3s ease;
+
+//   // Fixed header mode
+//   .header-fixed & {
+//     padding-top: fixed;
+//   }
+
+//   // Fixed header & fixed toolbar modes
+//   .header-fixed.toolbar-fixed & {
+//     padding-top: fixed;
+//   }
+// }
